@@ -2,6 +2,97 @@
 
 "items_game"
 {
+	"prefabs"
+	{
+		"weapon_scattergun"
+		{
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"base_item_name"	"TF_WEAPON_SCATTERGUN"
+			"enabled"	"1"
+			"item_class"	"tf_weapon_scattergun"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"item_type_name"	"#TF_Weapon_Scattergun"
+			"item_name"	"#TF_Weapon_Scattergun"
+			"item_slot"	"primary"
+			"item_quality"	"normal"
+			"baseitem" "0"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"image_inventory"	"backpack/weapons/c_models/c_scattergun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"attach_to_hands"	"1"
+			"inspect_panel_dist" "35"
+			"model_player"	"models/weapons/c_models/c_scattergun.mdl"
+			"used_by_classes"
+			{
+				"scout"	"1"
+			}
+			"static_attrs"
+			{
+				"weapon_stattrak_module_scale"			"0.608"
+				"min_viewmodel_offset"					"10 0 -11"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"particle_suffix"		"scattergun"
+		}
+		"weapon_pistol"
+		{
+			"craft_class"	""
+			"baseitem"		"0"
+			"enabled"	"1"
+			"item_class"	"tf_weapon_pistol"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"base_item_name"	"TF_WEAPON_PISTOL"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Pistol"
+			"item_name"	"#TF_Weapon_Pistol"
+			"item_slot"	"secondary"
+			"item_quality"		"unique"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"attach_to_hands"	"1"
+			"inspect_panel_dist" "31"
+			"image_inventory"	"backpack/weapons/c_models/c_pistol"
+			"model_player"	"models/weapons/c_models/c_pistol/c_pistol.mdl"
+			"used_by_classes"
+			{
+				"engineer"	"1"
+				"scout" "1"
+			}
+			"static_attrs"
+			{
+				"weapon_stattrak_module_scale"			"0.723"
+				"min_viewmodel_offset"				"10 0 -10"
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+			"particle_suffix"		"pistol"
+		}
+	}
 	"items"
 	{
 	
@@ -599,12 +690,11 @@ From: Open Fortress
 Source: https://gamebanana.com/mods/640364"
 			"item_quality"		"unique"
 			"propername"		"0"
-			"item_class"		"tf_weapon_shotgun_primary"
+			"item_class"		"tf_weapon_syringegun_medic"
 			"item_slot"			"primary"
 			"used_by_classes"
 			{
 				"scout"	"1"
-				"spy"	"1"
 			}
 			"item_iconname"	"TF_WEAPON_COMBAT_SMG"
 
@@ -616,20 +706,22 @@ Source: https://gamebanana.com/mods/640364"
 			{
 				// Actual Stats
 				"min_viewmodel_offset"			"10 0 -10"
-				"heal on hit for rapidfire" 	"8"
+				"heal on hit for rapidfire" 	"5"
 				// Converts a shotgun into an TF assault rifle
 				"hidden separator"				"1"
-				"damage bonus"					"2.7"
-				"bullets per shot bonus"		"0.1"
-				"fire rate bonus"				"0.15"
-				"weapon spread bonus"			"0.019"
-				"clip size bonus"				"5"
-				"maxammo primary increased"		"2.81"
-				"punch angle mod mult hidden"	"0"
-				"punch angle is constant"		"1"
-				"scattergun no reload single"	"1"
+				"damage bonus"					"1.5"
+				"fire rate bonus"				"1"
+				"clip size bonus"				"0.8"
+				"maxammo primary increased"		"1"
 			}
-
+			"attributes"
+			{
+				"override projectile type"
+				{
+					"item_class"		"override_projectile_type"
+					"value"				"1"
+				}
+			}
 			"visuals"
 			{
 				"sound_single_shot"			"Weapon_SMG.Single"		
@@ -1969,7 +2061,7 @@ Source: https://gamebanana.com/mods/523050"
 				"sniper full charge damage bonus"
 				{
 					"attribute_class"	"sniper_full_charge_damage_bonus"
-					"value"				"1.2"
+					"value"				"1.25"
  				}
 				"no damage falloff over distance"
 				{
@@ -2442,7 +2534,7 @@ Source: https://gamebanana.com/mods/561924"
 				"min_viewmodel_offset"					"10 0 -10"
 				"bombardier 6 bombs" 				"1"
 				"Blast radius increased" 			"1.5"
-				"damage penalty" 					"0.3"
+				"damage penalty" 					"0.45"
 				"projectile spread angle penalty" 	"8"
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
@@ -2491,6 +2583,11 @@ Source: https://gamebanana.com/mods/561924"
 					"attribute_class"	"grenade_no_bounce"
 					"value"	"1"
 				}
+				"no explosion falloff hidden"
+				{
+					"attribute_class"	"disable_explosion_falloff"
+					"value"	"1"
+				}
 				
 			}
 			"visuals"
@@ -2503,7 +2600,7 @@ Source: https://gamebanana.com/mods/561924"
 		
 		"20179"
 		{
-			"name"						"Dirty Bomb" //"TF_WEAPON_TCANNON"
+			"name"						"trashcan" //"TF_WEAPON_TCANNON"
 			"item_class"                "tf_weapon_compound_bow"
 			"show_in_armory"			"1"
 			"item_slot"                 "primary"
@@ -2626,183 +2723,183 @@ Weapon by: 'Reagy'"
 		
 		"20180"
 		{
-			"name"	"kk"
-			"item_class"	"tf_weapon_compound_bow"
-			"base_item_name"	"The Huntsman"
+			"name"	"autoscater"
+			"prefab"		"weapon_scattergun"
+			"item_class"	"tf_weapon_scattergun"
 			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Weapon_CompoundBow"
-			"item_name"	"kk"
-			"item_slot"	"primary"
+			"item_type_name"	"#TF_Weapon_Scattergun"
+			"item_name"	"The Titter-Tatter"
+			"item_description"	"Can't aim with the scattergun?
+Dont worry bro, I got you.
+
+Weapon by: 'colrot & Panacek'
+Source: https://gamebanana.com/mods/663241"
+			"item_logname"	"autoscater"
+			"item_iconname"	"autoscater"
 			"item_quality"	"unique"
-			"propername"	"1"
-			"item_iconname"	"huntsman"
+			"baseitem" "0"
 			"min_ilevel"	"10"
 			"max_ilevel"	"10"
-			"anim_slot"	"item2"
-			"image_inventory"	"backpack/weapons/c_models/c_bow/c_bow"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"inspect_panel_dist"	 			"65"
-			"model_player"	"models/weapons/c_models/c_bow/c_bow.mdl"
-			"attach_to_hands"	"1"
-			"flip_viewmodel"	"1"
-			"used_by_classes"
-			{
-				"sniper"	"1"
-			}
+			"inspect_panel_dist" "38"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_titter_scattergun/c_pep_scattergun"
+			"model_player"	"models/workshop/weapons/c_models/c_titter_scattergun/c_pep_scattergun.mdl"
+			"attach_to_hands" "1"
 			"static_attrs"
 			{
-				"min_viewmodel_offset"		"10 -4 -10"
+				"min_viewmodel_offset"					"10 0 -12"
 			}
 			"attributes"
 			{
-				"override projectile type"
+				"fire rate bonus"
 				{
-					"item_class"		"override_projectile_type"
-					"value"				"2"
+					"attribute_class"	"mult_postfiredelay"
+					"value" "0.4"
 				}
-				"hidden primary max ammo bonus"
+				"Reload time decreased"
 				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value"	"0.5"
+					"attribute_class"	"mult_reload_time"
+					"value" "0.7"
 				}
-				"disable fancy class select anim"
+				"clip size bonus"
 				{
-					"attribute_class"	"disable_fancy_class_select_anim"
-					"value"	"1"
+					"attribute_class"	"mult_clipsize"
+					"value" "2"
 				}
-				"special taunt"
+				"spread penalty"
 				{
-					"attribute_class"	"special_taunt"
-					"value" "1"
+					"attribute_class"	"mult_spread_scale"
+					"value" "1.2"
 				}
-				"allowed in medieval mode"
+				"damage penalty"
 				{
-					"attribute_class"	"allowed_in_medieval_mode"
-					"value"	"1"
+					"attribute_class"	"mult_dmg"
+					"value" "0.6"
 				}
 			}
 			"visuals"
 			{
-				"player_bodygroups"
-				{
-					"arrows"		"1"
-				}
-				"animation_replacement"
-				{
-					"ACT_PRIMARY_VM_INSPECT_START"		"ACT_ITEM2_VM_INSPECT_START"
-					"ACT_PRIMARY_VM_INSPECT_IDLE"		"ACT_ITEM2_VM_INSPECT_IDLE"
-					"ACT_PRIMARY_VM_INSPECT_END"		"ACT_ITEM2_VM_INSPECT_END"
-				}
+				"sound_single_shot"	"Weapon_Brawler_Blaster.Single"
+				"sound_burst"		"Weapon_Brawler_Blaster.SingleCrit"
 			}
-			"mouse_pressed_sound"	"ui/item_wood_pole_pickup.wav"
-			"drop_sound"		"ui/item_wood_pole_drop.wav"
 		}
 		
-		"20181" // Mine Layer
-        {
-            "name"				"Mine Layer"
-			"item_name"			"#TF_Weapon_MineLayer"
-			"item_type_name"	"#TF_Weapon_ProximityMineLauncher"
-			"item_description"	"#TF_Weapon_MineLayer_Desc"
-			"item_quality"		"normal"
+		"20181"
+		{
+			"name"		"The C.A.P.P.E.R"
+			"prefab"		"weapon_pistol"
+			"item_name"		"#TF_invasion_pistol"
+			"item_description"		"#TF_invasion_pistol_Desc"
+			"item_logname"		"the_capper"
+			"item_iconname"		"the_capper"
 			"propername"		"1"
+			"image_inventory"		"backpack/workshop/weapons/c_models/c_invasion_pistol/c_invasion_pistol"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"		"models/workshop/weapons/c_models/c_invasion_pistol/c_invasion_pistol.mdl"
+			"show_in_armory"	"0"
+			"static_attrs"
+			{
+				"weapon_allow_inspect"		"1"
+				"ragdolls become ash"		"1"
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_Capper.Single"
+				"sound_burst"		"Weapon_Capper.SingleCrit"
+				"styles"
+				{
+					"0"
+					{
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+				}
+			}
+			"visuals_red"
+			{
+				"skin"		"0"
+				"sound_single_shot"		"Weapon_Capper.Single"
+				"sound_burst"		"Weapon_Capper.SingleCrit"
+				"muzzle_flash"		"muzzle_raygun_red"
+				"tracer_effect"		"bullet_tracer_raygun"
+			}
+			"visuals_blu"
+			{
+				"skin"		"1"
+				"sound_single_shot"		"Weapon_Capper.Single"
+				"sound_burst"		"Weapon_Capper.SingleCrit"
+				"muzzle_flash"		"muzzle_raygun_blue"
+				"tracer_effect"		"bullet_tracer_raygun"
+			}
+		}
+		
+		"20182"
+		{
+			"name"	"double_agent"
+			"item_class"	"tf_weapon_revolver"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Revolver"
+			"item_name"	"The Double Agent"
+			"item_slot"	"secondary"
+			"item_quality"	"unique"
+			"propername"	"0"
+			"item_logname"	"double_agent"
+			"item_iconname"	"double_agent"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"item_description"	"For stealth operations
 
-			"item_class"	"tf_weapon_pipebomblauncher"
-			"item_slot"		"secondary"
-			"anim_slot"			"secondary"
-			"bucket"                    "0"
-            "bucket_position"           "0"
+Weapon by: 'Frump, MaxMartian & CarterG4'
+Source: https://gamebanana.com/mods/626636"
+			"image_inventory"	"backpack/weapons/c_models/c_doubleagent/c_doubleagent"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 			"32"
+			"model_player"	"models/workshop/weapons/c_models/c_double_agent/c_letranger.mdl"
+			"attach_to_hands" "1"
 			"used_by_classes"
 			{
 				"spy"	"1"
 			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -6"				
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
 			"attributes"
-            {
-				"sticky fizzles"
+			{
+				"keep disguise on attack"
 				{
-					"attribute_class"	"mod_sticky_fizzles"
-					"value" 			"1"
+					"attribute_class"	"keep_disguise_on_attack"
+					"value" "1"
 				}
-				"proximity mines"
+				"keep disguise desc"
 				{
-					"attribute_class"	"mod_sticky_is_proxy"
-					"value" 			"1"
+					"value" "1"
 				}
-				"max pipebombs decreased"
+				"minicrit while disguised"
 				{
-					"attribute_class"	"add_max_pipebombs"
-					"value" 			"-4"
+					"attribute_class"	"minicrit_while_disguised"
+					"value" "1"
 				}
-				"hidden separator"	"1"
-				"stickybomb charge rate mine layer"
+				"damage penalty"
 				{
-					"attribute_class"	"stickybomb_charge_rate"
-					"value" 			"0.0"
-				}
-				"Projectile speed increased hidden"
-				{
-					"attribute_class"	"mult_projectile_speed"
-					"value"				"0.75"
-				}
-				"charge weapon no extra speed"
-				{
-					"attribute_class"	"chargeweapon_no_extra_speed"
-					"value"				"1"
+					"attribute_class"	"mult_dmg"
+					"value" "0.7"
 				}
 				"clip size penalty"
 				{
 					"attribute_class"	"mult_clipsize"
-					"value" 			"0.5"
+					"value" "0.32"
 				}
-				"custom projectile model"
-				{
-					"attribute_class"	"custom_projectile_model"
-					"value"				"models\buildables\dispenser_light.mdl"
-				}
-            }
-
-			"model_world"		"models/weapons/w_models/w_minelayer.mdl"
-			"model_player"		"models/weapons/v_models/v_minelayer_demo.mdl"
-			"anim_slot"			"primary"
-			"attach_to_hands"	"2"
-			"static_attrs"
-			{
-				"min_viewmodel_offset"			"10 0 -10"
-				"class select override vcd" 	"class_select_gunboats_sticky"
 			}
 			"visuals"
-            {
-				"sound_single_shot"	"Weapon_ProxyBombLauncher.Single"
-				"sound_burst"		"Weapon_ProxyBombLauncher.SingleCrit"
-				"sound_double_shot"	"Weapon_Grenade_Mirv.ChargeUp"
-				"sound_special1"	"Weapon_ProxyBomb.Explode"
-				"animation_replacement"
-				{
-				    "ACT_ITEM2_VM_CHARGE"					"ACT_PRIMARY_ATTACK_STAND_PREFIRE"
-					"ACT_ITEM2_VM_CHARGE_IDLE_3"			"ACT_PRIMARY_VM_SECONDARYATTACK"
-					"ACT_VM_PRIMARYATTACK"					"ACT_PRIMARY_ATTACK_STAND_POSTFIRE"
-					"ACT_ITEM2_VM_DRYFIRE"					"ACT_PRIMARY_ATTACK_STAND_POSTFIRE"
-					
-					"ACT_MP_STAND_PRIMARY"						"ACT_MP_DEPLOYED_PRIMARY"
-					"ACT_MP_RUN_PRIMARY"						"ACT_MP_DEPLOYED_PRIMARY"
-					"ACT_MP_CROUCHWALK_PRIMARY"					"ACT_MP_CROUCHWALK_PRIMARY"
-					"ACT_MP_CROUCH_PRIMARY"						"ACT_MP_CROUCH_DEPLOYED_IDLE"
-					
-
-					"ACT_MP_CROUCH_DEPLOYED_IDLE"					"ACT_MP_CROUCH_PRIMARY"
-					"ACT_MP_CROUCHWALK_DEPLOYED"					"ACT_MP_CROUCHWALK_PRIMARY"
-					"ACT_MP_CROUCHWALK_PRIMARY"					"ACT_MP_CROUCHWALK_PRIMARY"
-				}
-            }
-			"item_logname"	"proxymine"
-			"item_iconname"	"proxymine"
-
-			"image_inventory"		"backpack/weapons/w_models/w_minelayer"
-			"mouse_pressed_sound"	"ui/item_medium_gun_pickup.wav"
-			"drop_sound"			"ui/item_medium_gun_drop.wav"
-        }
-		
+			{
+				"sound_single_shot"	"Weapon_Letranger.Single"
+				"sound_burst"	"Weapon_Letranger.SingleCrit"
+			}
+		}
 		////////////////////////////////////////////////////
 		// REGULAR TF2 WEAPONS                            //
 		////////////////////////////////////////////////////
@@ -3323,9 +3420,8 @@ Weapon by: 'Reagy'"
 		
 		"20112"
 		{
-			"name"	"jarate"
+			"name"	"jarate2"
 			"item_class"	"tf_weapon_jar"
-			"base_item_name"	"Jarate"
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Jar"
 			"item_name"	"#TF_Unique_Achievement_Jar"
@@ -3375,7 +3471,6 @@ Weapon by: 'Reagy'"
 					"ACT_SECONDARY_VM_INSPECT_END"		"ACT_ITEM1_VM_INSPECT_END"
 				}
 			}
-			"xifier_class_remap"	"jarate"
 			"mouse_pressed_sound"	"ui/item_bottle_pickup.wav"
 			"drop_sound"		"ui/item_bottle_drop.wav"
 		}
@@ -7346,6 +7441,15 @@ Weapon by: 'Reagy'"
 		{
 			"name"			"bombardier 6 bombs"
 			"description_string"	"Shoots 6 projectiles at once"
+			"description_format"	"value_is_inverted_percentage"
+			"hidden"		"0"
+			"effect_type"		"positive"
+			"stored_as_integer"	"0"
+		}
+		"7013"
+		{
+			"name"			"keep disguise desc"
+			"description_string"	"Keep disguise on attack"
 			"description_format"	"value_is_inverted_percentage"
 			"hidden"		"0"
 			"effect_type"		"positive"
