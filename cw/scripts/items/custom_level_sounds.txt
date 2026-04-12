@@ -489,3 +489,146 @@
 	"volume"		"1.0"
 	"wave"			")weapons/trashcannon_fire.wav"
 }
+// ------------------------------------------------------------------------------------ //
+//  Chainsaw (Ding a lings)
+// ------------------------------------------------------------------------------------ //
+"Chainsaw.WindUp"	
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/chainsaw_attack.wav"
+}
+
+"Chainsaw.Fire"	
+{
+	"channel"	"CHAN_STATIC"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/chainsaw_attack_loop.wav"
+}
+
+"Chainsaw.FireCrit"	
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/chainsaw_attack_crit.wav"
+}
+
+"Chainsaw.WindDown"	
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/chainsaw_winddown.wav"
+}
+
+"Chainsaw.Charge"	
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"0.75"
+	"wave"			")weapons/chainsaw_charge.wav"
+}
+
+"Chainsaw.Idle"	
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_74dB"
+	"volume"		"1.0"
+	"wave"			")weapons/chainsaw_idle.wav"
+}
+
+"ChargeFilled.Ding"
+{
+	"channel"	"CHAN_STATIC"
+	"volume"	"1.0"
+	"soundlevel"  	"SNDLVL_75dB"
+	"wave"		"weapons/chainsaw_recharge.wav"
+}
+
+// ------------------------------------------------------------------------------------ //
+// Pyro Cannon
+// ------------------------------------------------------------------------------------ //
+
+"Weapon_PyroCannon.Shoot"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"pitch"		"100, 103"
+	"wave"		")weapons/PyroCannon_Fire.wav"
+}
+
+"Weapon_PyroCannon.ShootCrit"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"pitch"		"100, 103"
+	"wave"		")weapons/PyroCannon_Fire_Crit.wav"
+}
+
+"Weapon_PyroCannon.Reload"
+{
+	"channel"		"CHAN_ITEM"
+	"soundlevel"	"SNDLVL_74dB"
+	"volume"		".5"
+	"pitch"		    "97, 100"
+	"wave"			")weapons/PyroCannon_Reload.wav"
+}
+"Weapon_Explothrower.Explosion"
+{
+	"channel"	"CHAN_WEAPON"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_95dB"
+	"pitch"		"PITCH_NORM"
+
+	"rndwave"
+	{
+			"wave"	")weapons/napalm_explode1.wav"
+			"wave"	")weapons/napalm_explode2.wav"
+			"wave"	")weapons/napalm_explode3.wav"
+	}
+}
+//china lake
+"Weapon_GrenadeLauncherDM.Single"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/grenade_launcher_dm_shoot.wav"
+}
+
+"Weapon_GrenadeLauncherDM.SingleCrit"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/grenade_launcher_dm_shoot_crit.wav"
+}
+
+"Weapon_GrenadeLauncherDM.DrumLoad"
+{
+	"channel"		"CHAN_ITEM"
+	"soundlevel"	"SNDLVL_NORM"
+	"volume"		".9"
+	"wave"		")weapons/grenade_launcher_dm_drum_load.wav"
+}
+
+"Weapon_GrenadeLauncherDM.Cock_Back"
+{
+	"channel"	"CHAN_ITEM"
+	"soundlevel"	"SNDLVL_74dB"
+	"volume"	".5"
+	"wave"		")weapons/grenade_launcher_dm_cock_back.wav"
+}
+
+"Weapon_GrenadeLauncherDM.Cock_Forward"
+{
+	"channel"	"CHAN_ITEM"
+	"soundlevel"	"SNDLVL_74dB"
+	"volume"	".5"
+	"wave"		")weapons/grenade_launcher_dm_cock_forward.wav"
+}

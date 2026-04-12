@@ -263,8 +263,9 @@ Source: https://gamebanana.com/mods/640364"
 			"name"				"TF_WEAPON_ASSAULT_RIFLE"
 			"item_name"			"The Assault Rifle"
 			"item_type_name"	"AR"
-			"item_description"	"God told me this is another way to kill.
-		
+			"item_description"	"This is my rifle.
+There are many like it, but this one is mine.
+
 Weapon by: Hetrocamo
 From: Open Fortress
 Source: https://gamebanana.com/mods/640364"
@@ -344,7 +345,7 @@ Source: https://gamebanana.com/mods/640364"
 			"static_attrs"
 			{
 				"min_viewmodel_offset"			"10 0 -10"
-				"damage bonus"				"1.20"
+				"damage bonus"					"1.1"
 				"Blast radius increased" 		"1.2"
 				"clip size penalty"				"0.25"
 				"hidden separator" "1"
@@ -461,7 +462,7 @@ Source: https://gamebanana.com/mods/640364"
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"1.15"
+					"value"	"1.1"
 				}
 				"disable fancy class select anim"
 				{
@@ -620,11 +621,12 @@ Source: https://gamebanana.com/mods/640364"
 			"static_attrs"
 			{
 				"min_viewmodel_offset"			"10 0 -10"
-				"rocket jump damage reduction"	"0.3"
+				"rocket jump damage reduction"	"0.5"
 				"custom projectile model"		"models/weapons/w_models/w_grenade_grenadelauncher_dm.mdl"
 				"damage penalty"				"0.9"
 				"hidden separator"				"1"
 				"rocket gravity"				"1.05"
+				"Reload time decreased" "0.9"
 			}			
 
 			"image_inventory"		"backpack/weapons/w_models/w_grenDM"
@@ -709,7 +711,7 @@ Source: https://gamebanana.com/mods/640364"
 				"heal on hit for rapidfire" 	"5"
 				// Converts a shotgun into an TF assault rifle
 				"hidden separator"				"1"
-				"damage bonus"					"1.5"
+				"damage bonus"					"1.3"
 				"fire rate bonus"				"1"
 				"clip size bonus"				"0.8"
 				"maxammo primary increased"		"1"
@@ -767,7 +769,7 @@ Source: https://gamebanana.com/mods/640364"
 			"static_attrs"
 			{
 				"min_viewmodel_offset"			"10 0 -10"
-				"damage bonus"					"1.2"
+				"damage bonus"					"1.15"
 				"fire rate penalty"				"1.25"
 				"maxammo primary reduced"		"0.4"
 			}
@@ -1539,7 +1541,11 @@ Weapon by: 'The One Of Wonders'"
 					"attribute_class"	"gravity_mod_active"
 					"value"	"0.5"
 				}
-
+				"self mark for death"
+				{
+					"attribute_class"	"self_mark_for_death"
+					"value"	"1"
+				}
 				"apply self knockback on swing"
 				{
 					"attribute_class"	"apply_self_knockback_swing"
@@ -2093,6 +2099,16 @@ Source: https://gamebanana.com/mods/523050"
 				{
 					"attribute_class"	"mult_postfiredelay_scoped"
 					"value"	"1.5"
+				}
+				"sniper zoom penalty"
+				{
+					"attribute_class"	"mult_zoom_fov"
+					"value"	"0.5"
+				}
+				"centerfire projectile"
+				{
+					"attribute_class"	"centerfire_projectile"
+					"value"	"1"
 				}
 
 			}
@@ -2652,7 +2668,7 @@ Weapon by: 'Reagy'"
 				//"damage blast push"
 				//{
 				//	"attribute_class"	"damage_blast_push"
-				//	"value" "			1.5"
+				//	"value" 			"20"
 				//}
 				"weapon_stattrak_module_scale"															
 				{
@@ -2763,7 +2779,7 @@ Source: https://gamebanana.com/mods/663241"
 				"clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
-					"value" "2"
+					"value" "1.66"
 				}
 				"spread penalty"
 				{
@@ -2785,35 +2801,55 @@ Source: https://gamebanana.com/mods/663241"
 		
 		"20181"
 		{
-			"name"		"The C.A.P.P.E.R"
-			"prefab"		"weapon_pistol"
-			"item_name"		"#TF_invasion_pistol"
-			"item_description"		"#TF_invasion_pistol_Desc"
-			"item_logname"		"the_capper"
-			"item_iconname"		"the_capper"
-			"propername"		"1"
+			"name" "the_capper"
+			"item_class"	"tf_weapon_pistol"
+			"item_type_name"	"#TF_Weapon_Pistol"
+			"item_logname" "the_capper"
+			"item_iconname" "the_capper"
+			"item_name"	"The C.A.P.P.E.R"
+			"item_slot"	"secondary"
+			"item_quality"	"unique"
+			"min_ilevel"	"15"
+			"max_ilevel"	"15"
+			"attach_to_hands"	"1"
+			"inspect_panel_dist" "31"
+			"item_description" "pew! pew!"
 			"image_inventory"		"backpack/workshop/weapons/c_models/c_invasion_pistol/c_invasion_pistol"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"		"models/workshop/weapons/c_models/c_invasion_pistol/c_invasion_pistol.mdl"
-			"show_in_armory"	"0"
+			"model_player"	"models/workshop/weapons/c_models/c_invasion_pistol/c_invasion_pistol.mdl"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"engineer" "1"
+			}
 			"static_attrs"
 			{
-				"weapon_allow_inspect"		"1"
+				"min_viewmodel_offset"					"10 0 -10"
+				"weapon_stattrak_module_scale"				"0.723"
 				"ragdolls become ash"		"1"
+			}
+			"attributes"
+			{
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "1.25"
+				}
+				"reveal cloaked victim on hit"
+				{
+					"attribute_class"	"reveal_cloaked_victim_on_hit"
+					"value" "1"
+				}
+				"reveal disguised victim on hit"
+				{
+					"attribute_class"	"reveal_disguised_victim_on_hit"
+					"value" "1"
+				}
 			}
 			"visuals"
 			{
-				"sound_single_shot"		"Weapon_Capper.Single"
-				"sound_burst"		"Weapon_Capper.SingleCrit"
-				"styles"
-				{
-					"0"
-					{
-						"skin_red"		"0"
-						"skin_blu"		"1"
-					}
-				}
+
 			}
 			"visuals_red"
 			{
@@ -2831,6 +2867,8 @@ Source: https://gamebanana.com/mods/663241"
 				"muzzle_flash"		"muzzle_raygun_blue"
 				"tracer_effect"		"bullet_tracer_raygun"
 			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
 		
 		"20182"
@@ -2899,6 +2937,166 @@ Source: https://gamebanana.com/mods/626636"
 				"sound_single_shot"	"Weapon_Letranger.Single"
 				"sound_burst"	"Weapon_Letranger.SingleCrit"
 			}
+		}
+		
+		"20183" // chainsaw work in progress
+		{
+			"name"		"chainsaw"
+			"item_name"			"The Chainsaw"
+			"item_type_name"	"tf_weapon_minigun"
+			"item_description"	"Let the massacre begin."
+			"item_quality"		"rarity4"
+			"propername"		"0"
+			"item_logname"	"chainsaw"
+			"item_iconname"	"chainsaw"
+			"show_in_armory" "0"
+			"item_class"	"tf_weapon_minigun"
+			"item_slot"	"primary"
+
+			"used_by_classes"
+			{
+				"heavy"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"			"10 0 -10"
+			}
+			"visuals"
+			{
+				"sound_reload"	"ChargeFilled.Ding"
+				"sound_empty"	"Weapon_Minifun.ClipEmpty"
+				"sound_double_shot"	"Chainsaw.Fire"
+				"sound_special1"	"Chainsaw.Charge"
+				"sound_special2"	"Chainsaw.WindDown"
+				"sound_special3"	"Chainsaw.Idle"
+				"sound_burst"	"Chainsaw.FireCrit"
+			}
+			"attributes"
+			{
+
+				//tbd
+				"shorter damage falloff distance"
+				{
+					"attribute_class"	"mult_falloff_distance"
+					"value" "0.000001"
+				}
+			}
+			"visuals_red"
+			{
+				"tracer_effect"		"0"
+			}
+			"visuals_blu"
+			{
+				"tracer_effect"		"0"
+			}
+			"model_world"   "models/weapons/w_models/w_chainsaw_dm.mdl"
+			"model_player"	"models/weapons/v_models/v_chainsaw.mdl"
+		//	"anim_slot"		"primary"
+			"attach_to_hands"	"1"
+
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_iron_curtain/c_iron_curtain"
+		}
+		
+		"20185"
+		{
+		    "name"						"TF_WEAPON_PYRO_HEAVYCANNON"
+			"prefab"					"weapon_flamethrower"
+			"show_in_armory"			"1"
+			"item_slot"					"primary"
+			"anim_slot"                 "primary"
+			"item_class"				"tf_weapon_grenadelauncher"
+
+			"item_name_color"           "190 200 233 255"
+			"image_inventory_size_w"		"245"
+			"image_inventory_size_h"		"145"
+			"propername"				"0"
+			"item_name"					"Sailor's Sea Shaker"
+			"item_type_name"			""
+			"item_description"			"Fires incendiary grenades
+No airblast
+
+Model by: 'Hau, Extra Ram'
+Animations by: 'Raptor Dan'
+Weapon by: 'The One Of Wonders'"											
+			"item_logname"				"Sailor's Sea Shaker"
+			"item_iconname"				"Sailor's Sea Shaker"
+			"image_inventory"			"backpack/weapons/c_models/c_pyro_cannon/c_pyro_cannon"
+			"model_world"				"models/weapons/c_models/c_pyro_cannon/c_pyro_cannon.mdl"
+			"model_player"				"models/weapons/v_models/v_pyro_cannon.mdl"
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"pyro"                "primary"
+			}
+			"static_attrs"
+			{
+			
+			}
+			"attributes"
+			{
+				"minicrit vs burning player"
+				{
+					"attribute_class"	"or_minicrit_vs_playercond_burning"
+					"value"				"1"
+				}
+				"weapon burn dmg reduced"
+				{
+					"attribute_class"	"mult_wpn_burndmg"
+					"value"				"0.66"
+				}
+				"custom projectile model"
+				{
+					"attribute_class"	"custom_projectile_model"
+					"value"				"models/weapons/w_models/w_flaregun_shell.mdl"
+				}
+				"hidden separator" "1"
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"0.66"
+				}
+				//"sticky detonate mode"
+				//{
+				//	"attribute_class"	"set_detonate_mode"
+				//	"value"				"3"
+				//}
+				"Reload time decreased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"				"0.7"
+				}
+				"Set DamageType Ignite"
+				{
+					"attribute_class"	"set_dmgtype_ignite"
+					"value"				"1"
+				}
+				"clip size bonus"
+				{
+					"attribute_class"	"mult_clipsize"		
+					"value"				"1.5"
+				}
+				"maxammo primary increased"
+				{
+					"attribute_class"	"mult_maxammo_primary"		
+					"value"				"1.5"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_PyroCannon.Shoot"
+				"sound_burst"			"Weapon_PyroCannon.ShootCrit"
+				"sound_special1"		"Weapon_Explothrower.Explosion"
+				"sound_empty"           "Null"
+				"sound_reload"			"Weapon_PyroCannon.Reload"
+				"animation_replacement"
+				{	
+					"ACT_MP_ATTACK_STAND_PRIMARY"				"ACT_MP_ATTACK_STAND_SECONDARYFIRE"  // Third Person
+					"ACT_MP_ATTACK_CROUCH_PRIMARY"				"ACT_MP_ATTACK_CROUCH_SECONDARYFIRE"
+					"ACT_MP_ATTACK_SWIM_PRIMARY"				"ACT_MP_ATTACK_SWIM_SECONDARYFIRE"
+				}
+			}
+			"mouse_pressed_sound"		"#ui/item_heavy_gun_pickup.wav"
+			"drop_sound"				"#ui/item_heavy_gun_drop.wav"
 		}
 		////////////////////////////////////////////////////
 		// REGULAR TF2 WEAPONS                            //
@@ -3058,7 +3256,10 @@ Source: https://gamebanana.com/mods/626636"
 			{
 				"min_viewmodel_offset"					"10 0 -8"
 			}
+			"attributes"
+			{
 
+			}
 			"visuals"
 			{
 				"sound_deploy"		"Cleaver.Draw"
@@ -3378,7 +3579,7 @@ Source: https://gamebanana.com/mods/626636"
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
-					"value" "1.1"
+					"value" "1.05"
 				}
 				"Projectile speed increased"
 				{
