@@ -381,39 +381,6 @@
 	"wave"		")weapons/shotgun_db_shoot_crit.wav"
 }
 
-//RAIL GUN
-"Weapon_Railgun.Single"
-{
-	"channel"	"CHAN_WEAPON"
-	"soundlevel"	"SNDLVL_94dB"
-	"volume"	"1.0"
-	"wave"		")weapons/railgun_shoot.wav"
-}
-
-"Weapon_Railgun.SingleCrit"
-{
-	"channel"	"CHAN_WEAPON"
-	"soundlevel"	"SNDLVL_94dB"
-	"volume"	"1.0"
-	"wave"		")weapons/railgun_shoot_crit.wav"
-}
-
-"Weapon_Railgun.Charge"
-{
-	"channel"	"CHAN_ITEM"
-	"soundlevel"	"SNDLVL_94dB"
-	"volume"	"1.0"
-	"wave"		")weapons/railgun_charge.wav"
-}
-
-"Weapon_Railgun.PilotLoop"
-{
-	"channel"	"CHAN_WEAPON"
-	"soundlevel"	"SNDLVL_74dB"
-	"volume"	".25"
-	"wave"		"weapons/railgun/rg_hum.wav"
-}
-
 // ------------------------------------------------------------------------------------ //
 // QUAKE ROCKET LAUNCHER
 // ------------------------------------------------------------------------------------ //
@@ -631,4 +598,19 @@
 	"soundlevel"	"SNDLVL_74dB"
 	"volume"	".5"
 	"wave"		")weapons/grenade_launcher_dm_cock_forward.wav"
+}
+
+//fart in a jar
+"Weapon_Explofart.Explosion"
+{
+	"channel"	"CHAN_WEAPON"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_140dB"
+
+	"rndwave"
+	{
+			"wave"	")weapons/fart1.wav"
+			"wave"	")weapons/fart2.wav"
+			"wave"	")weapons/fart3.wav"
+	}
 }
