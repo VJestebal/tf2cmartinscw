@@ -1,4 +1,4 @@
-printl("Script started tfc sentry")
+printl("Script started tfcsentry")
 
 PrecacheModel("models/buildables/tfcsentry1.mdl")
 PrecacheModel("models/buildables/tfcsentry2.mdl")
@@ -60,7 +60,7 @@ PrecacheModel("models/buildables/tfcsentry3_heavy.mdl")
             EntFireByHandle(sentryent,"RunScriptCode","self.SetModel(\"models/buildables/tfcsentry2_heavy.mdl\")",0.01,null,null) //set sentry lvl 2 building
             sentryent.ValidateScriptScope()
             local scope = sentryent.GetScriptScope()
-            scope.think <- function()
+            scope.thinktfcsentry <- function()
             {
                 //printl("Upgrading...")
                 if (NetProps.GetPropInt(sentryent, "m_iState") != 3){ // once it finishes upgrading set sentry lvl 2 
@@ -70,7 +70,7 @@ PrecacheModel("models/buildables/tfcsentry3_heavy.mdl")
                 return 0.01
             }
 
-            AddThinkToEnt(sentryent, "think")
+            AddThinkToEnt(sentryent, "thinktfcsentry")
         }
 
         local is_tfcsentry2 = sentryent.GetModelName().find("tfcsentry2.mdl")
@@ -78,7 +78,7 @@ PrecacheModel("models/buildables/tfcsentry3_heavy.mdl")
             EntFireByHandle(sentryent,"RunScriptCode","self.SetModel(\"models/buildables/tfcsentry3_heavy.mdl\")",0.01,null,null) //set sentry lvl 3 building
             sentryent.ValidateScriptScope()
             local scope = sentryent.GetScriptScope()
-            scope.think2 <- function()
+            scope.thinktfcsentry2 <- function()
             {
                 //printl("Upgrading...")
                 if (NetProps.GetPropInt(sentryent, "m_iState") != 3){ // once it finishes upgrading set sentry lvl 3
@@ -88,7 +88,7 @@ PrecacheModel("models/buildables/tfcsentry3_heavy.mdl")
                 return 0.01
             }
 
-            AddThinkToEnt(sentryent, "think2")
+            AddThinkToEnt(sentryent, "thinktfcsentry2")
         }
     }
 
@@ -106,7 +106,7 @@ PrecacheModel("models/buildables/tfcsentry3_heavy.mdl")
             local scope = sentryent.GetScriptScope()
             local states1counter = 0
             local currentmodel = 1 // 1: lvl1 building, 2: lvl1 ready, 3: lvl2 building, 4: lvl2 ready, 5: lvl3 building, 6: lvl3 ready
-            scope.think3 <- function()
+            scope.thinktfcsentry3 <- function()
             {   
                 //printl("Rebuilding...")
                 local state = NetProps.GetPropInt(sentryent, "m_iState") // 0 = building... 1 = ready 3 = upgrading...
@@ -165,7 +165,7 @@ PrecacheModel("models/buildables/tfcsentry3_heavy.mdl")
                 return 0.01
             }
 
-            AddThinkToEnt(sentryent, "think3")
+            AddThinkToEnt(sentryent, "thinktfcsentry3")
     }
 
     function OnGameEvent_post_inventory_application(params)
@@ -199,29 +199,6 @@ PrecacheModel("models/buildables/tfcsentry3_heavy.mdl")
         }
     }
 
-}
-
-::minidispenser <- {
-    function OnGameEvent_player_builtobject(params)
-    {
-        local sentryent = EntIndexToHScript(params.index)
-        local type = params.object
-        local creator = GetPlayerFromUserID(params.userid)
-
-        printl(sentryent)
-        printl(type)
-        printl(creator)
-
-        sentryent.SetModel("models/buildables/mini_dispenser.mdl")
-        printl("mini")
-    }
-
-    function OnGameEvent_sentry_on_go_active(params)
-    {
-        local sentryent = EntIndexToHScript(params.index)
-        sentryent.SetModel("models/buildables/mini_dispenser.mdl")
-
-    }
 }
 
 __CollectGameEventCallbacks(tfcsentry)

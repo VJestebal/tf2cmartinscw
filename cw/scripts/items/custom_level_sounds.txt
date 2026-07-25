@@ -973,3 +973,243 @@
 	"volume"	"1.0"
 	"wave"		")weapons/nailsmg_shoot_crit.wav"
 }
+
+
+// ------------------------------------------------------------------------------------ //
+// BAR
+// ------------------------------------------------------------------------------------ //
+"Weapon_BAR.Single"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/bar_shoot.wav"
+}
+
+"Weapon_BAR.SingleCrit"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/bar_shoot_crit.wav"
+}
+
+"Weapon_BAR.Explosion"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_95dB"
+	"volume"	"1"
+	"pitch"		"PITCH_NORM"
+	"wave"		")weapons\creeper_explosion.wav"
+}
+
+
+// ------------------------------------------------------------------------------------ //
+// MIRV EXPLOSION
+// ------------------------------------------------------------------------------------ //
+"Weapon_MIRVCANNON.Single"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/mirv_shoot.wav"
+}
+
+"Weapon_MIRVCANNON.SingleCrit"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/mirv_shoot_crit.wav"
+}
+
+"Weapon_MIRVCANNON.Explosion"
+{
+	"channel"	"CHAN_STATIC"
+	"soundlevel"	"SNDLVL_150dB"
+	"volume"	"1"
+	"pitch"		"100"
+	"wave"		"weapons\big_explosion.wav"
+}
+
+// ------------------------------------------------------------------------------------ //
+// potato cannon
+// ------------------------------------------------------------------------------------ //
+"Weapon_potatolauncher.Single"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/potato_shoot.wav"
+}
+
+"Weapon_potatolauncher.SingleCrit"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/potato_shoot_crit.wav"
+}
+
+// ------------------------------------------------------------------------------------ //
+//  dispenser minigun
+// ------------------------------------------------------------------------------------ //
+"dminigun.WindUp"	
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/dminigun_wind_up.wav"
+}
+
+"dminigun.Fire"	
+{
+	"channel"	"CHAN_STATIC"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/dminigun_shoot.wav"
+}
+
+"dminigun.FireCrit"	
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/dminigun_shoot_crit.wav"
+}
+
+"dminigun.WindDown"	
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/dminigun_wind_down.wav"
+}
+
+"dminigun.Empty"	
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/dminigun_empty.wav"
+}
+
+"dminigun.Spin"	
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/dminigun_spin.wav"
+}
+
+//speed cola theme
+
+"SpeedCola.Theme"
+{
+	"channel"		"CHAN_WEAPON"
+	"volume"		"1.000"
+	"soundlevel"	"SNDLVL_75dB"
+	"rndwave"
+	{
+			"wave"	"weapons/speedcolatheme.mp3"
+			"wave"	"weapons/doubletaptheme.mp3"
+	}
+}
+
+// ------------------------------------------------------------------------------------ //
+//  drill minigun
+// ------------------------------------------------------------------------------------ //
+"drillminigun.WindUp"	
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/drill_revup.wav"
+}
+
+"drillminigun.Fire"	
+{
+	"channel"	"CHAN_STATIC"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/drill_fire.wav"
+}
+
+"drillminigun.FireCrit"	
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/drill_firecrit.wav"
+}
+
+"drillminigun.WindDown"	
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/drill_revdown.wav"
+}
+
+"drillminigun.Empty"	
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/drill_revdown.wav"
+}
+
+"drillminigun.Spin"	
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/drill_iddle.wav"
+}
+
+//big daddy hurt
+
+"bigdaddy.hurt"
+{
+	"channel"		"CHAN_WEAPON"
+	"volume"		"1.000"
+	"soundlevel"	"SNDLVL_150dB"
+	"rndwave"
+	{
+			"wave"	"entities/big_daddy_hurt_1.mp3"
+			"wave"	"entities/big_daddy_hurt_2.mp3"
+			"wave"	"entities/big_daddy_hurt_3.mp3"
+	}
+}
+
+//speed cola theme
+
+"MiniMushroom.Theme"
+{
+	"channel"		"CHAN_WEAPON"
+	"volume"		"1.000"
+	"soundlevel"	"SNDLVL_94dB"
+	"wave"	"entities/mini_mushroom.mp3"
+
+
+}
+
+// ------------------------------------------------------------------------------------ //
+// Judge Death
+// ------------------------------------------------------------------------------------ //
+
+"Weapon_JudgeDeath.Shoot"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/judgedeath_shoot.wav"
+}
+
+"Weapon_JudgeDeath.ShootCrit"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/judgedeath_shoot_crit.wav"
+}
